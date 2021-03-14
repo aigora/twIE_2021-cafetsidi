@@ -1,11 +1,13 @@
 # [Título del trabajo]
 
-[Descripción breve del proyecto a realizar (2-3 frases).]
+Este trabajo consistirá en el desarrollo de un programa que consistirá en el pedido de un café y comida (opcional) a gusto del usuario. 
 
 ## Integrantes del equipo
 
-[Nombres, apellidos, y usuario GitHub de los integrantes del equipo.]
+Joshua Guila Valderueda (Joshgv25)
+Solomiya Havryshko
+Mario Carrión Sirvent
 
 ## Objetivos del trabajo
 
-[Lista de los objetivos que se persiguen con el trabajo propuesto.]
+
