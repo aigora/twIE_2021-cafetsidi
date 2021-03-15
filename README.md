@@ -4,7 +4,9 @@ Este trabajo consistirá en el desarrollo de un programa que consistirá en el p
 
 ## Integrantes del equipo
 
-Joshua Guila Valderueda (Joshgv25)\nSolomiya Havryshko\nMario Carrión Sirvent
+### Joshua Guila Valderueda @Joshgv25@
+### Solomiya Havryshko @github-clasroom  [bot]
+### Mario Carrión Sirvent @mcsirvent
 
 ## Objetivos del trabajo
 
