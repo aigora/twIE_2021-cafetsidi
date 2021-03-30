@@ -10,14 +10,20 @@ int main()
   printf("4.- Beneficios\n");
   printf("5.- Salir\n");
 
-  
+
   do
   {
      scanf("%i", &num);
     switch (num)
     {
       case 1:
-      printf("Realice su pedido");
+      printf("Introduzca el numero del producto que desee\n");
+
+      printf("\n 1.- Cafe con leche\n 2.- Cafe largo\n 3.- Cafe manchado\n 4.- Cafe solo\n 5.- Cafe americano\n");
+      printf(" 6.- Cafe latte\n 7.- Cafe helado\n 8.- Capuccino\n 9.- Cafe moka\n");
+
+
+
       break;
 
       case 2:
@@ -34,7 +40,7 @@ int main()
     }
 
   }while(num != 5);
-  
+
 
   return 0;
 }
