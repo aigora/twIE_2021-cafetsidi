@@ -1,0 +1,19 @@
+Bebida:
+
+1 Cafe solo 3,50
+2 Cafe con leche 3,95
+3  Cafe bombon 4,95
+4 Capuccino 4,50
+5 Chocolate 4,50
+6 Chocolate con nata 4,95
+7 te (verde, rojo o negro) 3,95
+
+
+Comida:
+1 Tostada con queso brie y mermelada de higos 6,50
+2 Tostada con aguacate y huevos revueltos 6,50
+3 Tostada con membrillo, queso, jamon y rucula 7,95
+4 Tostada con aceite y tomate 3
+5 Bowl de yogur 5,90
+6 Gofres con sirope y nata 4,50
+7 Bolleria (Napolitana, rosquilla, palmera) 1
