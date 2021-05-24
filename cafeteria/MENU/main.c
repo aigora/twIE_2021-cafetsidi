@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<string.h>
+#include <string.h>
+#include "functions.h"
+#define N 1000
+
 int main()
 {
 	int opcion_inicio;
@@ -16,8 +19,11 @@ int main()
 	int nusuario;
 	int ncontra;
 	int ingreso_empleado;
+	float tocapagar;
 	personal trabajadores[N];
 	FILE *cf;
+	FILE *pf;
+    char c;
  printf("Bienvenido a cafetsidi. Por favor, indique si quiere continuar como cliente o como administrador.\n");
  printf("1.- Cliente \t\t2.- Administrador\n");
  do
@@ -71,12 +77,14 @@ int main()
 					 	printf("Usted no quiere comer");
 					 }
 					 printf ("Su pedido se esta preparando");
+					 tocapagar = preciototal (opcion_bebida, opcion_suplemento, opcion_comida);
+					 printf("A continuacion encontrara el resumen de su pedido:\nBebida: %opcion_bebida\nSuplemento: &opcion_suplemento\nComida: %opcion_comida\n A cobrar: %.2f\n");
 					 break;
+					 
 					 //Aqui ira una funcion que imprima en pantalla el resumen del pedido y que calcule el precio total
 				
 				case 2:
-					 FILE *pf;
-                     char c;
+					 
                     pf=fopen("Menu.txt","r");
                     if(pf== NULL){
                     	printf("Error en la apertura del archivo\n");
@@ -88,69 +96,77 @@ int main()
                         }
                         fclose(pf);
                         return 0;
-}	
-break;
-            case 2:
-	cf=fopen("credenciales.txt","r");
-	if(cf==NULL){
-		printf("No se ha podido abrir el archivo\n");
-		return -1 ;
-	}
-	else
-	{
-		while(fscanf(cf,"%d; %d \n ",&trabajadores[i].usuario,&trabajadores[i].contra) !=EOF)
-		{
-			i++;
-		}
-	}
-	fclose(cf);
-	printf("Ha accedido como un administrador.\n");
-	printf("A continuación debe inciar sesión.\n");
-	do{
-		printf("Introduzca su clave de usuario\n");
-		scanf("%d",&nusuario);
-		for(j=0;j<N;j++){
-			if(nusuario==trabajadores[j].usuario)
-			{
-				comparador=1;
-				ingreso_empleado=j;
-				printf("El numero de usuario es correcto\n");
+                        break;
 			}
-		}
-				intentos ++;
-			 }while(intentos<3 && comparador==0);
+			break;
+            
+			case 2:
+				cf=fopen("credenciales.txt","r");
+				if(cf==NULL)
+				{
+					printf("No se ha podido abrir el archivo\n");
+					return -1 ;
+				}
+				else
+				{			
+					while(fscanf(cf,"%d; %d \n ",&trabajadores[i].usuario,&trabajadores[i].contra) !=EOF)
+				{
+					i++;
+				}
+				}			
+				fclose(cf);
+				printf("Ha accedido como un administrador.\n");
+				printf("A continuación debe inciar sesión.\n");
+				do
+				{
+					printf("Introduzca su clave de usuario\n");
+					scanf("%d",&nusuario);
+					for(j=0;j<N;j++)
+					{
+						if(nusuario==trabajadores[j].usuario)
+						{
+							comparador=1;
+							ingreso_empleado=j;
+							printf("El numero de usuario es correcto\n");
+						}
+					}
+					intentos ++;
+			 	}while(intentos<3 && comparador==0);
 			 	if(comparador==0)
 			 	{
-			 	printf("Ha agotado los intentos\n");
-				printf("Hable con el encargado\n");
-				return 0;	
-				 }		
-		comparador=0;	
-		intentos=0;
-		do{
-			printf("Introduzca la contraseña:\n");
-			scanf("%d",&ncontra);
-			if(ncontra==trabajadores[ingreso_empleado].contra){
-				comparador=1;
-				printf("La contraseña es correcta\n");
-				printf("Bienvenido\n");
-			}
-			intentos++;
-		}while(intentos<3 && comparador==0);
-		if(comparador==0){
-			printf("Ha superado el numero de intentos\n"); 
-			return 0;
-          }
-          printf("Menu de inicio como administrador\n");
-			return 0;
-	}
- 			default:}	
-		}
-		}
-			 }
+			 		printf("Ha agotado los intentos\n");
+					printf("Hable con el encargado\n");
+					return 0;	
+				}		
+				comparador=0;	
+				intentos=0;
+				do
+				{
+					printf("Introduzca la contraseña:\n");
+					scanf("%d",&ncontra);
+					if(ncontra==trabajadores[ingreso_empleado].contra)
+					{
+						comparador=1;
+						printf("La contraseña es correcta\n");
+						printf("Bienvenido\n");
+					}
+					intentos++;
+				}while(intentos<3 && comparador==0);
+				if(comparador==0)
+				{
+					printf("Ha superado el numero de intentos\n"); 
+					return 0;
+          		}
+          		
+				printf("Menu de inicio como administrador\n");
+				return 0;
+	
+ 			default:
+		
+		
+			 
  			break;
- 		} 		
-  }
-while (opcion_inicio <= 2);
+ 	} 		
+  }while (opcion_inicio <= 2);
 return 0;
 }
