@@ -71,7 +71,7 @@ float preciototal (int opcion1, int opcion2, int opcion3)
 		precio3=0;
 	}
 	
-	precio_total= precio1 + precio2 + precio3;
+	precio_total = precio1 + precio2 + precio3;
 	
 	return precio_total;
 	
