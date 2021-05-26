@@ -55,7 +55,7 @@ int main()
  					scanf("%i",&quiere_suplemento);
  					if (quiere_suplemento == 1)
  					{
- 						printf("Por favor, seleccione su suplemento");
+ 						printf("Por favor, seleccione su suplemento\n");
  						printf("1.- Azucar\n2.- Miel\n3.- Canela\n4.- Leche condensada\n5.- Hielo\n6.- Sirope\t\n");
  						scanf("%i",&opcion_suplemento);
 					 }
@@ -100,7 +100,7 @@ int main()
 			}
 			break;
             
-			case 2:
+		case 2:
 				cf=fopen("credenciales.txt","r");
 				if(cf==NULL)
 				{
@@ -160,7 +160,8 @@ int main()
           		
 				printf("Menu de inicio como administrador\n");
 				return 0;
-	
+		break;
+		
  			default:
 		
 		
