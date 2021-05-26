@@ -79,7 +79,7 @@ int main()
 					 printf ("Su pedido se esta preparando");
 					 tocapagar = preciototal (opcion_bebida, opcion_suplemento, opcion_comida);
 					 printf("A continuacion encontrara el resumen de su pedido:\nBebida: %i\nSuplemento: %i\nComida: %i\n A cobrar: %.2f\n", opcion_bebida, opcion_suplemento, opcion_comida, tocapagar);
-					 break;
+				break;
 					 
 					 //Aqui ira una funcion que imprima en pantalla el resumen del pedido y que calcule el precio total
 				
@@ -96,7 +96,7 @@ int main()
                         }
                         fclose(pf);
                         return 0;
-                        break;
+                break;
 			}
 			break;
             
