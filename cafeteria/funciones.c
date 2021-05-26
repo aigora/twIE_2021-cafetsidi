@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "functions.h"
+#include "funciones.h"
 
 float preciototal (int opcion1, int opcion2, int opcion3)
 {
@@ -62,7 +62,7 @@ float preciototal (int opcion1, int opcion2, int opcion3)
 	{
 		precio3=4.5;
 	}
-	else if (opcion3 == 7);
+	else if (opcion3 == 7)
 	{
 		precio3=1;
 	}
