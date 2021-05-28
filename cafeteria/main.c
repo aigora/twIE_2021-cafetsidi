@@ -44,10 +44,11 @@ int main()
 
     float totalpedido;
 
- printf("Bienvenido a cafetsidi. Por favor, indique si quiere continuar como cliente o como administrador.\n");
- printf("1.- Cliente \t\t2.- Administrador\n");
+
  do
  {
+ 	 printf("Bienvenido a cafetsidi. Por favor, indique si quiere continuar como cliente o como administrador.\n");
+	 printf("1.- Cliente \t\t2.- Administrador\n");
  	scanf("%i",&opcion_inicio);
  	switch (opcion_inicio)
  	{
@@ -70,6 +71,7 @@ int main()
  					else
  					{
  						printf("Usted no quiere beber");
+ 						opcion_bebida=0;
 					 }
  					printf("¿Quiere un suplemento para su bebida?\n1.- Si\t\t2.- No");
  					scanf("%i",&quiere_suplemento);
@@ -82,6 +84,7 @@ int main()
 					 else
 					 {
 					 	printf("Usted no quiere suplemento\n");
+					 	opcion_suplemento=0;
 					 }
 
  					printf("¿Desea algo de comer?\n1.- Si\t\t2.- No");
@@ -95,6 +98,7 @@ int main()
 					 else
 					 {
 					 	printf("Usted no quiere comer");
+					 	opcion_comida=0;
 					 }
 					 printf ("Su pedido se esta preparando");
 					 tocapagar = preciototal (opcion_bebida, opcion_suplemento, opcion_comida);
@@ -143,7 +147,7 @@ int main()
 					{
 						if(nusuario==trabajadores[j].usuario)
 						{
-							comparar=1;
+							comparador=1;
 							ingreso_empleado=j;
 							printf("El numero de usuario es correcto\n");
 						}
@@ -164,7 +168,7 @@ int main()
 					scanf("%d",&ncontra);
 					if(ncontra==trabajadores[ingreso_empleado].contra)
 					{
-						comparar=1;
+						comparador=1;
 						printf("La contraseña es correcta\n");
 						printf("Bienvenido\n");
 					}
@@ -177,11 +181,9 @@ int main()
           		}
 
 				printf("Menu de inicio como administrador\n");
-				return 0;
+				
 
-				switch ()
-				{
-                case 1:
+			
                  pd = fopen("Pedidos.txt","a");
 					 if (pd==NULL)
                         {
@@ -278,6 +280,7 @@ precio_bebida[0] = 0;
                                 break;
 
                             default:
+                            	printf("h");
                                 break;
                             }
 
@@ -314,6 +317,7 @@ precio_bebida[0] = 0;
                                 strcpy(suplemento, "Sin suplemento");
                                 break;
                             default:
+                            	printf("h");
                                 break;
                             }
 
@@ -354,6 +358,7 @@ precio_bebida[0] = 0;
                                 strcpy(comida, "Sin comida");
                                 break;
                             default:
+                            	printf("h");
                                 break;
                             }
 
@@ -367,8 +372,8 @@ precio_bebida[0] = 0;
                         }
                         fclose(pdr);
 
-                break;
-				}
+               
+					}
 		break;
 
  			default:
@@ -376,6 +381,7 @@ precio_bebida[0] = 0;
 
 
  			break;
+ 		}
  	}
   }while (opcion_inicio <= 2);
 return 0;
