@@ -59,11 +59,11 @@ int main()
  			switch (opcion_cliente)
  			{
  				case 1:
- 					printf("Desea algo de beber?\n1.- Si\t\t2.- No");
+ 					printf("Desea algo de beber?\n1.- Si\t\t2.- No\n");
  					scanf("%i",&quiere_bebida);
  					if (quiere_bebida == 1)
  					{
- 						printf("Seleccione la bebida que le gustaria tomar:\n");
+ 						printf("\nSeleccione la bebida que le gustaria tomar:\n");
  						printf("1.- Cafe solo\t3,50%c\n2.- Cafe con leche\t3,95%c\n3.- Cafe bombon\t4,95%c\n4.- Capuccino\t4,50%c\n5.- Chocolate\t4,50%c\n6.- Chocolate con nata\t4,95%c\n7.-te (verde, rojo o negro)\t3,95%c\n",36,36,36,36,36,36,36);
  						scanf ("%i",&opcion_bebida);
  						printf("Ha elegido la opción %i\n", opcion_bebida);
@@ -73,21 +73,21 @@ int main()
  						printf("Usted no quiere beber");
  						opcion_bebida=0;
 					 }
- 					printf("¿Quiere un suplemento para su bebida?\n1.- Si\t\t2.- No");
+ 					printf("¿Quiere un suplemento para su bebida?\n1.- Si\t\t2.- No\n");
  					scanf("%i",&quiere_suplemento);
  					if (quiere_suplemento == 1)
  					{
- 						printf("Por favor, seleccione su suplemento\n");
+ 						printf("\nPor favor, seleccione su suplemento\n");
  						printf("1.- Azucar\n2.- Miel\n3.- Canela\n4.- Leche condensada\n5.- Hielo\n6.- Sirope\t\n");
  						scanf("%i",&opcion_suplemento);
 					 }
 					 else
 					 {
-					 	printf("Usted no quiere suplemento\n");
+					 	printf("\nUsted no quiere suplemento\n");
 					 	opcion_suplemento=0;
 					 }
 
- 					printf("¿Desea algo de comer?\n1.- Si\t\t2.- No");
+ 					printf("¿Desea algo de comer?\n1.- Si\t\t2.- No\n");
  					scanf("%i",&quiere_comida);
  					if (quiere_comida == 1)
  					{
@@ -97,10 +97,10 @@ int main()
 					 }
 					 else
 					 {
-					 	printf("Usted no quiere comer");
+					 	printf("Usted no quiere comer\n");
 					 	opcion_comida=0;
 					 }
-					 printf ("Su pedido se esta preparando");
+					 printf ("\nSu pedido se esta preparando\n");
 					 tocapagar = preciototal (opcion_bebida, opcion_suplemento, opcion_comida);
 					 printf("A continuacion encontrara el resumen de su pedido:\nBebida: %i\nSuplemento: %i\nComida: %i\n A cobrar: %.2f\n", opcion_bebida, opcion_suplemento, opcion_comida, tocapagar);
 				break;
