@@ -109,10 +109,8 @@ int main()
 				}
 				else
 				{			
-					while(fscanf(cf,"%d; %d \n ",&trabajadores[i].usuario,&trabajadores[i].contra) !=EOF)
-				{
+				while(fscanf(cf,"%c;%d;%d\n",&trabajadores[i].nombre,&trabajadores[i].usuario,&trabajadores[i].contra) !=EOF)
 					i++;
-				}
 				}			
 				fclose(cf);
 				printf("Ha accedido como un administrador.\n");
@@ -163,7 +161,7 @@ int main()
 		break;
 		
  			default:
-		
+				printf("hola\n");
 		
 			 
  			break;
